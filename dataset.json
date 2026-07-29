@@ -1,0 +1,14 @@
+[
+  {
+    "task": "Parse an AWS S3 bucket name from an S3 URI in the format 's3://bucket-name/key/path'",
+    "format": "regex"
+  },
+  {
+    "task": "Create a JSON CloudFormation template for an AWS Lambda function with basic properties including function name, runtime, and role ARN",
+    "format": "json"
+  },
+  {
+    "task": "Write a Python function that converts an AWS timestamp (Unix epoch) to a human-readable datetime string",
+    "format": "python"
+  }
+]
