@@ -1,17 +1,18 @@
 [
   {
-    "task": "Create an AWS Lambda function configuration that sets up a Python 3.11 runtime with 512MB memory, 60-second timeout, and an IAM role for S3 access",
-    "format": "json",
-    "solution_criteria": "Must include Runtime set to 'python3.11', MemorySize of 512, Timeout of 60, Role ARN, and Handler pointing to a valid Python function"
-  },
-  {
-    "task": "Write a Python function that extracts the bucket name and object key from an S3 event record received by a Lambda function",
-    "format": "python",
-    "solution_criteria": "Must parse the S3 event structure, extract bucket name from Records[0]['s3']['bucket']['name'] and key from Records[0]['s3']['object']['key'], and return both values"
-  },
-  {
-    "task": "Create a regular expression that validates AWS IAM role ARNs in the format: arn:aws:iam::ACCOUNT_ID:role/ROLE_NAME",
-    "format": "regex",
-    "solution_criteria": "Must match valid ARN format with 12-digit account ID and alphanumeric role names with hyphens, underscores, or forward slashes; must reject malformed ARNs"
+    "prompt_inputs": {
+      "height": "178 cm",
+      "weight": "75 kg",
+      "goal": "muscle recovery and strength building for a vegetarian endurance athlete",
+      "restrictions": "lactose intolerant, no animal products except eggs"
+    },
+    "solution_criteria": [
+      "Meal plan spans exactly one full day with 4-5 meals/snacks",
+      "All meals are vegetarian, lactose-free, and accommodate stated restrictions",
+      "Provides high protein intake appropriate for muscle recovery (minimum 1.6g per kg body weight)",
+      "Maintains balanced macronutrient ratios suitable for athletic performance"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a specialized athlete requiring high-protein intake and specific macronutrient ratios for muscle recovery, including dietary restrictions (e.g., lactose intolerance) and food preferences (e.g., vegetarian)"
   }
 ]

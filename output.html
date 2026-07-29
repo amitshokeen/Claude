@@ -1,0 +1,182 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt Evaluation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+            .header {
+                background-color: #f0f0f0;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .summary-stats {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .stat-box {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                flex-basis: 30%;
+                min-width: 200px;
+            }
+            .stat-value {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th {
+                background-color: #4a4a4a;
+                color: white;
+                text-align: left;
+                padding: 12px;
+            }
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                vertical-align: top;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .output-cell {
+                white-space: pre-wrap;
+            }
+            .score {
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 3px;
+                display: inline-block;
+            }
+            .score-high {
+                background-color: #c8e6c9;
+                color: #2e7d32;
+            }
+            .score-medium {
+                background-color: #fff9c4;
+                color: #f57f17;
+            }
+            .score-low {
+                background-color: #ffcdd2;
+                color: #c62828;
+            }
+            .output {
+                overflow: auto;
+                white-space: pre-wrap;
+            }
+
+            .output pre {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 10px;
+                margin: 0;
+                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #333;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+                white-space: pre-wrap; 
+                word-wrap: break-word; 
+            }
+
+            td {
+                width: 20%;
+            }
+            .score-col {
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Prompt Evaluation Report</h1>
+            <div class="summary-stats">
+                <div class="stat-box">
+                    <div>Total Test Cases</div>
+                    <div class="stat-value">1</div>
+                </div>
+                <div class="stat-box">
+                    <div>Average Score</div>
+                    <div class="stat-value">8.0 / 10</div>
+                </div>
+                <div class="stat-box">
+                    <div>Pass Rate (≥7)</div>
+                    <div class="stat-value">100.0%</div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Prompt Inputs</th>
+                    <th>Solution Criteria</th>
+                    <th>Output</th>
+                    <th>Score</th>
+                    <th>Reasoning</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            <tr>
+                <td>Testing with a specialized athlete requiring high-protein intake and specific macronutrient ratios for muscle recovery, including dietary restrictions (e.g., lactose intolerance) and food preferences (e.g., vegetarian)</td>
+                <td class="prompt-inputs"><strong>height:</strong> 178 cm<br><strong>weight:</strong> 75 kg<br><strong>goal:</strong> muscle recovery and strength building for a vegetarian endurance athlete<br><strong>restrictions:</strong> lactose intolerant, no animal products except eggs</td>
+                <td class="criteria">• Meal plan spans exactly one full day with 4-5 meals/snacks<br>• All meals are vegetarian, lactose-free, and accommodate stated restrictions<br>• Provides high protein intake appropriate for muscle recovery (minimum 1.6g per kg body weight)<br>• Maintains balanced macronutrient ratios suitable for athletic performance</td>
+                <td class="output"><pre># One-Day Meal Plan for Vegetarian Endurance Athlete
+
+Here is a one-day meal plan for muscle recovery and strength building that accommodates lactose intolerance and vegetarian preferences:
+
+* **Calorie Target:** Approximately 2,800 calories
+* **Macronutrient Breakdown:** Protein (120g), Fat (85g), Carbs (380g)
+
+## Meal Plan:
+
+* **Breakfast (7:00 AM):** Oatmeal (100g dry weight) with banana (120g), ground flaxseed (15g), and almond milk (240ml). Two scrambled eggs (100g) on the side.
+    * Protein: 18g, Fat: 12g, Carbs: 65g
+
+* **Mid-Morning Snack (10:00 AM):** Hummus (60g) with carrot sticks (100g) and whole grain crackers (40g).
+    * Protein: 6g, Fat: 8g, Carbs: 35g
+
+* **Lunch (1:00 PM):** Lentil and quinoa bowl (150g cooked lentils, 80g cooked quinoa) with roasted sweet potato (200g), spinach (80g), and tahini dressing (20g). Cherry tomatoes (80g).
+    * Protein: 28g, Fat: 12g, Carbs: 95g
+
+* **Afternoon Snack (4:00 PM):** Peanut butter (30g) with apple (180g) and sunflower seeds (20g).
+    * Protein: 10g, Fat: 18g, Carbs: 35g
+
+* **Dinner (7:00 PM):** Baked tofu (200g) marinated in soy sauce and ginger, with brown rice (100g cooked), steamed broccoli (250g), and sesame oil (10ml).
+    * Protein: 35g, Fat: 18g, Carbs: 80g
+
+* **Evening Snack (9:00 PM):** Coconut yogurt alternative (200g, dairy-free) with berries (100g) and granola (30g).
+    * Protein: 7g, Fat: 9g, Carbs: 35g
+
+This meal plan emphasizes plant-based protein sources (legumes, tofu, eggs, nuts, and seeds), complex carbohydrates for endurance, and healthy fats to support recovery and strength building while remaining fully vegetarian and lactose-free.</pre></td>
+                <td class="score-col"><span class="score score-high">8</span></td>
+                <td class="reasoning">The solution fully satisfies all mandatory requirements with clear presentation of daily totals, macronutrient breakdown, and detailed meal specifications with portions and timing. The 6 meals/snacks span a full day appropriately. Protein intake meets the 1.6g/kg threshold for muscle recovery. All dietary restrictions are properly accommodated with thoughtful substitutions. However, the macronutrient distribution slightly deviates from optimal endurance athlete ratios, and the meal plan lacks strategic timing considerations for athletic performance. These are secondary criterion issues that don't prevent the solution from meeting core requirements.</td>
+            </tr>
+        
+            </tbody>
+        </table>
+    </body>
+    </html>
+    
